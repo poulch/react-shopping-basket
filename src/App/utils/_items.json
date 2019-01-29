@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+    "name": "Basket Item 1",
+    "price": 299,
+    "stock": 4
+  },
+  {
+    "id": 2,
+    "name": "Basket Item 2",
+    "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+    "price": 199,
+    "stock": 2
+  },
+  {
+    "id": 3,
+    "name": "Basket Item 3",
+    "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+    "price": 99,
+    "stock": 1
+  },
+  {
+    "id": 4,
+    "name": "Basket Item 4",
+    "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+    "price": 80,
+    "stock": 1
+  }
+]

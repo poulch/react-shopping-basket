@@ -1,0 +1,16 @@
+[
+  {
+    "id": "asd234sdf43443",
+    "cvc": 321,
+    "holderName": "Jan Kowalski",
+    "expiredDate": "2020-01-02",
+    "cardNumber": 4242424242424242
+  },
+  {
+    "id": "asdaa4rt5gfeg43",
+    "cvc": 677,
+    "holderName": "Adam Kowalski",
+    "expiredDate": "2021-01-02",
+    "cardNumber": 5252525252525252
+  }
+]

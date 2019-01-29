@@ -1,0 +1,18 @@
+.item {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
