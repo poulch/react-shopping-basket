@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import Item from '../../components/Item/Item'
+import BasketItem from '../../components/BasketItem/BasketItem'
 
 import { IStore } from '../../redux/types'
 import { selectItems, selectItemTotal } from '../../redux/services/basket'
@@ -20,7 +20,7 @@ class Basket extends React.Component<IProps> {
     return (
       <div>
         {items.map((item: IBasketItem) => (
-          <Item key={item.id} data={item} />
+          <BasketItem key={item.id} data={item} />
         ))}
 
         <div className={styles.summary}>

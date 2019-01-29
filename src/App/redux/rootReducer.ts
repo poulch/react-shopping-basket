@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import { backetReducer } from './services/basket'
+import { basketReducer } from './services/basket'
 
 export const rootReducer = combineReducers({
-  basket: backetReducer
+  basket: basketReducer
 })

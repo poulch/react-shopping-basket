@@ -46,4 +46,4 @@ const mapStateToProps = (state: IStore) => ({
   itemsLength: selectItemsLenght(state)
 })
 
-export default connect(mapStateToProps)(withRouter(Main))
+export default withRouter(connect(mapStateToProps)(Main))
