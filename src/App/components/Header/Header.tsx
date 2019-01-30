@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as BasketSvg } from '../../utils/basket.svg'
+import { ReactComponent as BasketSvg } from '../../utils/media/basket.svg'
 import styles from './Header.module.scss'
 
 interface IProps {

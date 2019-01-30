@@ -18,7 +18,7 @@ interface IState {
 }
 
 export default class PaymentSelect extends React.Component<
-  RouteComponentProps<{}> & IProps,
+  RouteComponentProps & IProps,
   IState
 > {
   readonly state: IState = {

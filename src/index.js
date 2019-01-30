@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-import store from './App/redux/store'
 
 import Main from './App/contianers/Main/Main'
+import store from './App/redux/store'
 
 ReactDOM.render(
   <Provider store={store}>

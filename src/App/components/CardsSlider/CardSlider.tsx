@@ -11,20 +11,18 @@ interface IProps {
   onNext: () => void
 }
 
-class CardSlider extends React.Component<IProps> {
-  render() {
-    const { onNext, onPrev, selectedCard } = this.props
-
-    return (
-      <div className={styles.slider}>
-        <button onClick={onPrev} className={styles.arrowBack} />
-        <div className={styles.sliderItems}>
-          <CardItem key={selectedCard.cardNumber} card={selectedCard} />
-        </div>
-        <button onClick={onNext} className={styles.arrowNext} />
-      </div>
-    )
-  }
-}
+const CardSlider: React.FunctionComponent<IProps> = ({
+  onNext,
+  onPrev,
+  selectedCard
+}) => (
+  <div className={styles.slider}>
+    <button onClick={onPrev} className={styles.arrowBack} />
+    <div className={styles.sliderItems}>
+      <CardItem key={selectedCard.cardNumber} card={selectedCard} />
+    </div>
+    <button onClick={onNext} className={styles.arrowNext} />
+  </div>
+)
 
 export default CardSlider

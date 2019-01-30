@@ -16,7 +16,7 @@ import { IStore } from '../../redux/types'
 import { selectItemsLenght } from '../../redux/services/basket'
 import { ROUTING } from '../../utils/constants'
 import styles from './Main.module.scss'
-import '../../utils/global.scss'
+import '../../utils/styles/global.scss'
 
 interface IProps {
   itemsLength: number

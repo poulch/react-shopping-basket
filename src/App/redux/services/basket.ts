@@ -1,8 +1,8 @@
 import { IStore } from '../types'
 import { IBasketActions, BASKET_ACTIONS } from './basketTypes'
 import { ICard, IBasketItem } from '../../utils/globalTypes'
-import cards from '../../utils/_cards.json'
-import items from '../../utils/_items.json'
+import cards from '../../utils/data/_cards.json'
+import items from '../../utils/data/_items.json'
 
 const initialState = {
   items: items || [],
