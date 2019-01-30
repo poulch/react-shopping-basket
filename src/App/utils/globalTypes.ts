@@ -6,15 +6,9 @@ export interface IBasketItem {
   stock: number
 }
 
-export enum CardType {
-  Visa = 'Visa',
-  MasterCard = 'MasterCard'
-}
-
 export interface ICard {
   cvc: number
   holderName: string
   expiredDate: string
-  cardNumber: number
-  type: CardType
+  cardNumber: string
 }

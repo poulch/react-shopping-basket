@@ -11,8 +11,8 @@ const CardItem: React.FunctionComponent<IProps> = ({ card }) => {
     <div className={styles.item}>
       <p>Numer karty: {card.cardNumber}</p>
       <p>Kod CVC: {card.cvc}</p>
-      <p>Data waności {card.expiredDate}</p>
-      <p>Imię i nazwisko właściciela{card.holderName}</p>
+      <p>Data waności: {card.expiredDate}</p>
+      <p>Imię i nazwisko właściciela: {card.holderName}</p>
     </div>
   )
 }

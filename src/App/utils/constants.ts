@@ -6,5 +6,5 @@ export enum ROUTING {
   SUMMARY = '/summary'
 }
 
-export const VisaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/
-export const MasterCardRegex = /^5[1-5][0-9]{14}$/
+export const CardNumberRegex = /^[0-9]{4} {0,1}[0-9]{4} {0,1}[0-9]{4} {0,1}[0-9]{4}$/
+export const ExipredDateRegex = /^(0[1-9]|1[0-2])\/?(([0-9]{4}|[0-9]{2})$)/

@@ -3,14 +3,12 @@
     "cvc": 321,
     "holderName": "Jan Kowalski",
     "expiredDate": "2020-01-02",
-    "cardNumber": 5487463045943355,
-    "type": "MasterCard"
+    "cardNumber": "5487463045943355"
   },
   {
     "cvc": 677,
     "holderName": "Adam Kowalski",
     "expiredDate": "2021-01-02",
-    "cardNumber": 4556230826597901,
-    "type": "Visa"
+    "cardNumber": "4556230826597901"
   }
 ]

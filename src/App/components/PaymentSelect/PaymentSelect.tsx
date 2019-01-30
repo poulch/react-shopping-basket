@@ -9,11 +9,11 @@ import styles from './PaymentSelect.module.scss'
 
 interface IProps {
   cards: ICard[]
+  selectedCard: ICard
   selectCard: (card: ICard) => void
 }
 
 interface IState {
-  selectedCard: ICard
   currentIndex: number
 }
 
@@ -22,8 +22,7 @@ export default class PaymentSelect extends React.Component<
   IState
 > {
   readonly state: IState = {
-    currentIndex: 0,
-    selectedCard: this.props.cards[0]
+    currentIndex: 0
   }
 
   onNext = () => {
@@ -35,7 +34,7 @@ export default class PaymentSelect extends React.Component<
       this.setState(
         (state: IState) => ({ currentIndex: state.currentIndex + 1 }),
         () => {
-          this.setState({ selectedCard: cards[this.state.currentIndex] })
+          this.props.selectCard(cards[this.state.currentIndex])
         }
       )
     }
@@ -49,32 +48,33 @@ export default class PaymentSelect extends React.Component<
       this.setState(
         (state: IState) => ({ currentIndex: state.currentIndex - 1 }),
         () => {
-          this.setState({ selectedCard: cards[this.state.currentIndex] })
+          this.props.selectCard(cards[this.state.currentIndex])
         }
       )
     }
   }
 
+  onAdd = () => {
+    this.props.history.push(`${ROUTING.PAYMENT}${ROUTING.PAYMENT_ADD}`)
+  }
+
   selectCard = () => {
-    const { selectedCard } = this.state
-    this.props.selectCard(selectedCard)
     this.props.history.push(ROUTING.SUMMARY)
   }
 
   render() {
-    const { cards } = this.props
-    const { currentIndex } = this.state
+    const { selectedCard } = this.props
 
     return (
       <>
         <div className={styles.buttons}>
-          <button>Add new card</button>
-          <button onClick={this.selectCard}>Select card</button>
+          <button onClick={this.onAdd}>Dodaj nową katę</button>
+          <button onClick={this.selectCard}>Zapłać</button>
         </div>
         <CardSlider
           onNext={this.onNext}
           onPrev={this.onPrev}
-          selectedCard={cards[currentIndex]}
+          selectedCard={selectedCard}
         />
       </>
     )

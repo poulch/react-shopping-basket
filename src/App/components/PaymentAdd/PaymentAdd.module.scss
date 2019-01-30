@@ -1,0 +1,20 @@
+.error {
+  margin-top: 10px;
+  color: red;
+  font-size: 12px;
+}
+
+.inputContainer {
+  margin-bottom: 20px;
+}
+
+.submit {
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(216, 216, 216);
+    color: #000000;
+  }
+}

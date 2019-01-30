@@ -25,15 +25,13 @@ class Summary extends React.Component<IProps> {
 
     return (
       <div className={styles.summary}>
-        <h1>Podsumowanie zamówienia</h1>
-
-        <h2>Twoje zamówienie</h2>
+        <h1>Twoje zamówienie</h1>
         {items.map((item: IBasketItem) => (
           <BasketItem key={item.id} data={item} />
         ))}
 
         <div className={styles.summary}>
-          <p>Do zapłaty: {total}</p>
+          <p>Całkowity koszt: {total}</p>
         </div>
 
         <h2>Dane kary</h2>

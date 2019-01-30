@@ -1,7 +1,8 @@
 import { ICard } from '../../utils/globalTypes'
 
 export enum BASKET_ACTIONS {
-  SET_CARD = 'SET_CARD'
+  SET_CARD = 'SET_CARD',
+  ADD_CARD = 'ADD_CARD'
 }
 
 interface ISetCard {
@@ -9,4 +10,9 @@ interface ISetCard {
   card: ICard
 }
 
-export type IBasketActions = ISetCard
+interface IAddCard {
+  type: BASKET_ACTIONS.ADD_CARD
+  card: ICard
+}
+
+export type IBasketActions = ISetCard | IAddCard
