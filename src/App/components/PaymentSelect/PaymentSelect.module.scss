@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 30px;
+
+  button {
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(216, 216, 216);
+      color: #000000;
+    }
+  }
+}

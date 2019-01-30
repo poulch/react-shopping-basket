@@ -11,22 +11,30 @@ import { ROUTING } from '../../utils/constants'
 import { selectCards, setActiveCard } from '../../redux/services/basket'
 
 interface IProps {
-  card: ICard[]
-  setActiveCard: (id: string) => void
+  cards: ICard[]
+  setActiveCard: (card: ICard) => void
 }
 
 class Payment extends React.Component<RouteComponentProps<{}> & IProps> {
   render() {
+    const { cards, setActiveCard } = this.props
+
     return (
       <div>
         <Switch>
           <Route
             path={this.props.match.url}
-            render={props => <PaymentSelect />}
+            render={(props: RouteComponentProps) => (
+              <PaymentSelect
+                selectCard={setActiveCard}
+                cards={cards}
+                {...props}
+              />
+            )}
           />
           <Route
             path={`${this.props.match.url}/${ROUTING.PAYMENT_ADD}`}
-            render={props => <PaymentAdd />}
+            render={(props: RouteComponentProps) => <PaymentAdd {...props} />}
           />
         </Switch>
       </div>

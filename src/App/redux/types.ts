@@ -4,6 +4,6 @@ export interface IStore {
   basket: {
     items: IBasketItem[]
     cards: ICard[]
-    selectedCardId: number
+    selectedCard: ICard
   }
 }

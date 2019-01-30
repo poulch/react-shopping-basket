@@ -7,30 +7,27 @@ import items from '../../utils/_items.json'
 const initialState = {
   items: items || [],
   cards: cards || [],
-  selectedCardId: 0
+  selectedCard: {}
 }
 
 export const basketReducer = (state = initialState, action: IBasketActions) => {
   switch (action.type) {
     case BASKET_ACTIONS.SET_CARD:
-      return { ...state, selectedCardId: action.cardId }
+      return { ...state, selectedCard: action.card }
     default:
       return state
   }
 }
 
-export const setActiveCard = (cardId: string) => ({
+export const setActiveCard = (card: ICard) => ({
   type: BASKET_ACTIONS.SET_CARD,
-  cardId
+  card
 })
 
 export const selectItems = (state: IStore) => state.basket.items
 export const selectItemsLenght = (state: IStore) => state.basket.items.length
 export const selectCards = (state: IStore) => state.basket.cards
-export const selectSelectedCard = (state: IStore) =>
-  state.basket.cards.find(
-    (card: ICard) => card.cardNumber === state.basket.selectedCardId
-  )
+export const selectSelectedCard = (state: IStore) => state.basket.selectedCard
 export const selectItemTotal = (state: IStore) =>
   state.basket.items.reduce(
     (total: number, item: IBasketItem) => total + item.price,

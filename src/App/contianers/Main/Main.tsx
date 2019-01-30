@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom'
 
 import Basket from '../Basket/Basket'
+import Payment from '../Payment/Payment'
+import Summary from '../Summary/Summary'
 import Header from '../../components/Header/Header'
 
 import { IStore } from '../../redux/types'
@@ -35,6 +37,8 @@ class Main extends React.Component<RouteComponentProps<{}> & IProps> {
         <div className={styles.content}>
           <Switch>
             <Route path={ROUTING.BASKET} component={Basket} />
+            <Route path={ROUTING.PAYMENT} component={Payment} />
+            <Route path={ROUTING.SUMMARY} component={Summary} />
           </Switch>
         </div>
       </section>
